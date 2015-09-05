@@ -1,126 +1,116 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
-	<title>Editable Invoice</title>
+	<title>Facture</title>
 	
-	<link rel='stylesheet' type='text/css' href='css/bill_style.css' />
-	<link rel='stylesheet' type='text/css' href='css/bill_print.css' media="print" />
-	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
-	<script type='text/javascript' src='js/example.js'></script>
-
+	<link rel='stylesheet' href="css/bill_print.css" />
+	<link rel="stylesheet" href="css/bill_print.css" type="text/css" media="screen" charset="utf-8">
+	
+	
 </head>
 
 <body>
 
 	<div id="page-wrap">
 
-		<textarea id="header">INVOICE</textarea>
-		
-		<div id="identity">
-		
-            <textarea id="address">Chris Coyier
-123 Appleseed Street
-Appleville, WI 53719
-
-Phone: (555) 555-5555</textarea>
-
             <div id="logo">
-              <img id="image" src="images/logo.png" alt="logo" />
+              <img id="image" src="images/alyssa.png" alt="logo" width="200" />
             </div>
-		
+		<div class="titre" >FACTURE</div>
+		<div id="bill-number">N° 0001</div>
+		<div id="bill-date">Date : 02/09/2015</div>
+		<div id="client">
+			<div id="code">
+				<span class="libelle">Code :</span> 000055
+			</div>
+			
+				<div id="societe">SITEM</div>
+				<div id="adresse">
+				Z.I II, ZRIBA HAMMAM </div>
+				<span id="code-postale">
+				1152</span> - <span id="ville"> ZAGHOUAN
+				</span>
+				<div id="mf">
+				<span class="libelle"> M.F :   </span>    872153 R/A/M/000
+				</div>
+				<div id="ref">
+				<span class="libelle"> Réf  :   </span>    BC N°201550065 DU 29/07/2015
+				</div>
+				<div id="exo">
+				<span class="libelle"> Exonération n° :</span> 021201500031 
+				</div>
+				<div id="validite">
+				<span class="libelle"> Validité :    </span>         31/12/2015
+				</div>
+			
 		</div>
-		
-		<div style="clear:both"></div>
-		
-		<div id="customer">
-
-            <textarea id="customer-title">Widget Corp.
-c/o Steve Widget</textarea>
-
-            <table id="meta">
-                <tr>
-                    <td class="meta-head">Invoice #</td>
-                    <td><textarea>000123</textarea></td>
-                </tr>
-                <tr>
-
-                    <td class="meta-head">Date</td>
-                    <td><textarea id="date">December 15, 2009</textarea></td>
-                </tr>
-                <tr>
-                    <td class="meta-head">Amount Due</td>
-                    <td><div class="due">$875.00</div></td>
-                </tr>
-
-            </table>
-		
-		</div>
-		
-		<table id="items">
+			<table id="items">
 		
 		  <tr>
-		      <th>Item</th>
-		      <th>Description</th>
-		      <th>Unit Cost</th>
-		      <th>Quantity</th>
-		      <th>Price</th>
+		      <th>Désignation</th>
+		      <th>PU</th>
+		      <th>Quantités</th>
+		      <th>Total HTVA</th>
 		  </tr>
 		  
 		  <tr class="item-row">
-		      <td class="item-name"><div class="delete-wpr"><textarea>Web Updates</textarea></div></td>
-		      <td class="description"><textarea>Monthly web updates for http://widgetcorp.com (Nov. 1 - Nov. 30, 2009)</textarea></td>
-		      <td><textarea class="cost">$650.00</textarea></td>
-		      <td><textarea class="qty">1</textarea></td>
-		      <td><span class="price">$650.00</span></td>
+		      <td class="description"><div>Monthly web updates for http://widgetcorp.com (Nov. 1 - Nov. 30, 2009)</div></td>
+		      <td><div class="cost">650.00 TND</div></td>
+		      <td><div class="qty">1</div></td>
+		      <td><span class="price">650.00 TND</span></td>
 		  </tr>
 		  
 		  <tr class="item-row">
-		      <td class="item-name"><div class="delete-wpr"><textarea>SSL Renewals</textarea></div></td>
 
-		      <td class="description"><textarea>Yearly renewals of SSL certificates on main domain and several subdomains</textarea></td>
-		      <td><textarea class="cost">$75.00</textarea></td>
-		      <td><textarea class="qty">3</textarea></td>
-		      <td><span class="price">$225.00</span></td>
+		      <td class="description"><div>Yearly renewals of SSL certificates on main domain and several subdomains</div></td>
+		      <td><div class="cost">75.00 TND</div></td>
+		      <td><div class="qty">3</div></td>
+		      <td><span class="price">225.00 TND</span></td>
 		  </tr>
 		  
-		  <tr id="hiderow">
-		    <td colspan="5"><a id="addrow" href="javascript:;" title="Add a row">Add a row</a></td>
-		  </tr>
+		  
 		  
 		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Subtotal</td>
-		      <td class="total-value"><div id="subtotal">$875.00</div></td>
+		      <td colspan="3" class="total-line">Montant HTVA</td>
+		      <td class="total-value"><div id="subtotal">875.00 TND</div></td>
 		  </tr>
 		  <tr>
 
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Total</td>
-		      <td class="total-value"><div id="total">$875.00</div></td>
+		      <td colspan="3" class="total-line">Montant TVA (18%)</td>
+		      <td class="total-value"><div id="total">875.00 TND</div></td>
 		  </tr>
 		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line">Amount Paid</td>
+		      <td colspan="3" class="total-line">Timbre Fiscal</td>
 
-		      <td class="total-value"><textarea id="paid">$0.00</textarea></td>
+		      <td class="total-value"><div id="paid">0.00 TND</div></td>
 		  </tr>
 		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line balance">Balance Due</td>
-		      <td class="total-value balance"><div class="due">$875.00</div></td>
+		      <td colspan="3" class="total-line balance">Montant TTC</td>
+		      <td class="total-value balance"><div class="due">875.00 TND</div></td>
 		  </tr>
 		
 		</table>
 		
-		<div id="terms">
-		  <h5>Terms</h5>
-		  <textarea>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</textarea>
-		</div>
+		  
+		  <p>Arrêtée la présente facture à la somme de <span id="somme"> Trois Mille Six Cent Quatre Vingt Douze Dinars 720 Millimes</span>.</p>
+	
+	
+	<footer>
+		<img src="images/apave.png" alt="Apave" />
+		<img src="images/medcontrole.png" alt="Med Controle" />
+	<hr />
+		Sarl au capital de 40000 Dinars
+Siège : Espace Tunis Imm.I, 5ème Etage-APP5-5. 1002 Montplaisir/Adresse de correspondance :23 Bis Av Haroun Errachid 1082 Mutuelle ville  / Tél : + 216 71 846 342 – 71 846 343 /  Fax : + 216 71 846 341 / e-mail : alyssaetancheite@gmail.com
+Code T.V.A : 1194234Y/A/M/000- RC : B0376962011 –RIB BH : 14013013101700645552
+
+	</footer>
 	
 	</div>
+	
+	
 	
 </body>
 

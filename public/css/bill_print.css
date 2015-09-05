@@ -1,4 +1,51 @@
-#hiderow,
-.delete {
-  display: none;
-}
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+* { margin: 0; padding: 0; }
+#page-wrap { width: 700px; margin: 0 auto; }
+
+table { border-collapse: collapse; }
+table td, table th { border: 1px solid black; padding: 5px; }
+
+.titre { height: 20px; width: 100%; margin: 20px 0;  text-align: center; color: black; font: bold 20pt Helvetica, Sans-Serif;  letter-spacing: 20px; padding: 8px 0px; }
+#bill-number{font-size: 18px;font-weight: bold;}
+#bill-date{font-size: 18px;font-weight: bold;}
+#client{background: #eee;padding: 10px;margin: 5px;}
+#client #societe {font-size: 18px;font-weight: bold;}
+.libelle{font-size: 18px;font-weight: bold;}
+#somme {font-weight: bold;}
+
+#address { width: 350px; height: 150px; float: left; display: inline-block; }
+#customer { overflow: hidden; }
+
+#logo {margin-top: 25px; border: 1px solid #fff; max-width: 440px; max-height: 100px; }
+
+
+#customer-title { font-size: 20px; font-weight: bold; float: left; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+#meta td.meta-head { text-align: left; background: #eee; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+
+#items { clear: both; width: 100%; margin: 30px 0 30px 0; border: 1px solid black; }
+#items th { background: #eee; }
+#items textarea { width: 80px; height: 50px; }
+#items tr.item-row td { border: 1px solid black; vertical-align: top; }
+#items td.description { width: 300px; }
+#items td.item-name { width: 175px; }
+#items td.description textarea, #items td.item-name textarea { width: 100%; }
+#items td.total-line { border-right: 1px solid black; text-align: right; border-bottom: 0; border-top: 0; text-align: center; }
+#items td.total-value { border-left: 1px solid black; padding: 10px; }
+#items td.total-value textarea { height: 20px; background: none; }
+#items td.balance { background: #eee; border-top: 1px solid black; text-align: center; font-weight: : bold; }
+#items td.blank { border: 0; }
+
+#terms { text-align: center; margin: 20px 0 0 0; }
+#terms h5 { text-transform: uppercase; font: 13px Helvetica, Sans-Serif; letter-spacing: 10px; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+#terms textarea { width: 100%; text-align: center;}
+
+footer {text-align: center; margin: 20px 0 0 0;}
